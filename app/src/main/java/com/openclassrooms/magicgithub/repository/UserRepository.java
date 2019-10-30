@@ -27,6 +27,7 @@ public class UserRepository {
     }
 
     public void deleteUser(User user) {
-        // TODO: A modifier
+        // On appelle la méthode deleteUser() de notre instance d'interface.
+        apiService.deleteUser(user);
     }
 }

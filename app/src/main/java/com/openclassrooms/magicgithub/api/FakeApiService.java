@@ -14,6 +14,9 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public List<User> getUsers() {
+        /* Notre liste de "users" est déjà générée à la L.9 en tant qu'attribut de la présente classe via l'appel de
+         * la méthode generateUsers() qui retourne la liste des FAKE_USERS depuis la classe FakeApiServiceGenerator.
+         * Ici, notre méthode se charge donc de retourner cette liste de "users".*/
         return users;
     }
 
@@ -23,7 +26,9 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public void generateRandomUser() {
-        // TODO: A modifier
+        /*Dans la classe User il y a une methode random() qui retourne un user tiré aléatoirement de la liste FAKE_USERS_RANDOM
+         *Ici, il nous reste  donc à ajouter cet user aléatoire à notre liste de users*/
+        users.add(User.random());
     }
 
     /**
